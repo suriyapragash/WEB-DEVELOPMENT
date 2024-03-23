@@ -1,0 +1,941 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script>
+function myFunction() {
+  var x = document.getElementById("myLinks");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+
+var counter=1;
+setInterval(function(){
+  document.getElementById('radio' + counter).checked=true;
+  counter++;
+  if(counter > 3){
+     counter=1;
+  }
+},2000)
+
+function verify(){
+var suriya=document.getElementById("S1").value;
+var suriya2=document.getElementById("S2").value;
+var suriya3=document.getElementById("S3").value;
+var suriya4=document.getElementById("S4").value;
+var suriya5=document.getElementById("S5").value;
+var suriya6=document.getElementById("S6").value;
+var suriya7=document.getElementById("S7").value;
+var suriya8=document.getElementById("S8").value;
+if(suriya=="")
+{
+document.getElementById("message1").innerHTML="<img src='unckecked.PNG' width=20px height=20px/>Fill the first name";
+return false;
+}
+if(suriya2=="")
+{
+document.getElementById("message2").innerHTML="<img src='unckecked.PNG' width=20px height=20px/>Fill the last name";
+return false;
+}
+if(suriya2.length>5)
+{
+document.getElementById("message2").innerHTML="<img src='unckecked.PNG' width=20px height=20px/>Last name atleast 5 characters";
+return false;
+}
+if(suriya3=="")
+{
+document.getElementById("message3").innerHTML="<img src='unckecked.PNG' width=20px height=20px/>Fill the father name";
+return false;
+}
+if(suriya4=="")
+{
+document.getElementById("message4").innerHTML="<img src='unckecked.PNG' width=20px height=20px/>Enter phone number";
+return false;
+}
+if(suriya5=="")
+{
+document.getElementById("message5").innerHTML="<img src='unckecked.PNG' width=20px height=20px/>Enter correct gmail";
+return false;
+}
+if(suriya6!=suriya7)
+{
+document.getElementById("message6").innerHTML="<img src='unckecked.PNG' width=20px height=20px/>Miss match password";
+return false;
+}
+if(suriya8=="")
+{
+document.getElementById("message7").innerHTML="<img src='unckecked.PNG' width=20px height=20px/>Select Course";
+return false;
+}
+else{
+alert("Admiddion Registration Successfully");
+}
+}
+
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+<style>
+.word{
+width:100%;
+height:10%;
+margin:0;
+padding:0;
+background-color:red;
+text:transform:uppercase;
+white-space:nowrap;
+}
+.word h1{
+color:white;
+font-size:2rem;
+font-weight:800;
+font-family:verdana;
+margin-bottom:6px;
+animation:animate 10s linear infinite;
+padding-left:100%;
+display:inline-block;
+}
+@keyframes animate{
+100%{
+transform:translate(-100%,0);
+}
+}
+.t1 img{
+margin-left:5%;
+margin-top:5%;
+border-radius:20px;
+}
+.container{
+width:100%;
+padding:5%;
+display:flex;
+margin-left:35%;
+margin-top:-15%;
+}
+.Search-bar{
+background:rgba(225,255,255,0.2);
+display:flex;
+border-radius:60px;
+padding:10px 20px;
+} 
+.search-bar img{
+width:50px;
+height:20px;
+border-radius:50%;
+}
+.search-bar input{
+background-color:white;
+color:red;
+border-radius:20px;
+font-size:20px;
+cursor:pointer;
+}
+.search-bar input:hover{
+background-color:blue;
+color:white;
+}
+.search-bar button{
+background-color:white;
+border-radius:50%;
+border:ridge red;
+cursor:pointer;
+}
+pragash1 {
+align-items: center;
+background: #E3E3E3;
+display: flex;
+height: 100vh;
+justify-content: center;
+}
+@-webkit-keyframes scroll {
+0% {
+-webkit-transform: translateX(0);
+transform: translateX(0);
+}
+100% {
+-webkit-transform: translateX(calc(-250px * 7));
+transform: translateX(calc(-250px * 7));
+}
+}
+@keyframes scroll {
+0% {
+-webkit-transform: translateX(0);
+transform: translateX(0);
+}
+100% {
+-webkit-transform: translateX(calc(-250px * 7));
+transform: translateX(calc(-250px * 7));
+}
+}
+.suriya1 {
+background: pr;
+box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+height: 100px;
+margin: auto;
+overflow: hidden;
+position: relative;
+width: 960px;
+}
+.suriya1::before, .suriya1::after {
+background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
+content: "";
+height: 100px;
+position: absolute;
+width: 200px;
+z-index: 2;
+}
+.suriya1::after {
+right: 0;
+top: 0;
+-webkit-transform: rotateZ(180deg);
+transform: rotateZ(180deg);
+}
+.suriya1::before {
+left: 0;
+top: 0;
+}
+.suriya1 .d-track {
+-webkit-animation: scroll 40s linear infinite;
+animation: scroll 40s linear infinite;
+display: flex;
+width: calc(250px * 14);
+}
+.suriya1 .d {
+height: 100px;
+width: 250px;
+}
+.m1{
+  width: 120px;
+  margin-left:80%;
+  margin-top:-10%;
+  background-color:green;
+  height: 50px;
+  color: white;
+  border-radius: 10px;
+}
+.m1 ul li{
+color:white;
+}
+ul li a{
+color:green;
+font-weight:500;
+padding:5px 0;
+display:block;
+text-transform:capitalize;
+text-decoration:none;
+transition:0.2s ease-out;
+}
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  position: relative;
+}
+
+.topnav #myLinks {
+  display: none;
+}
+
+.topnav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+.topnav a.icon {
+  background: black;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.i1{
+padding:0;
+margin:0;
+height:100vh;
+justify-self:center;
+align-items:center;
+}
+.section{
+margin:0;
+padding:0;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+.slider{
+width:800px;
+height:500px;
+border-radius:10px;
+overflow:hidden;
+}
+.slide{
+width:500%;
+height:500px;
+display:flex;
+}
+.slide input{
+display:none;
+}
+.st{
+width:20%;
+tansition:2s;
+}
+.st img{
+width:800px;
+height:500px;
+}
+.nav-m{
+position:absolute;
+width:800px;
+margin-top:-40px;
+justify-content:center;
+display:flex;
+}
+.m-btn{
+border:2px solid #23e3c2;
+padding:5px;
+border-radius:10px;
+cursor:pointer;
+transition:1s;
+}
+.m-btn:not(:last-child){
+margin-right:30px;
+}
+.m-btn:hover{
+background-color:#23e3c2;
+}
+#radio1:checked ~ .first{
+margin-left:0;
+}
+#radio2:checked ~ .first{
+margin-left:-20%;
+}
+#radio3:checked ~ .first{
+margin-left:-40%;
+}
+.nav-auto{
+position:absolute;
+width:800px;
+margin-top:-40px;
+justify-content:center;
+display:flex;
+}
+.nav-auto div{
+border:2px solid #23e3c2;
+padding:5px;
+border-radius:10px;
+transition:1s;
+}
+.nav-auto div:not(:last-child){
+margin-right:30px;
+justify-content:center;
+}
+#radio1:checked ~ .nav-auto .a-b1{
+background-color:#23e3c2;
+}
+#radio2:checked ~ .nav-auto .a-b2{
+background-color:#23e3c2;
+}
+#radio3:checked ~ .nav-auto .a-b3{
+background-color:#23e3c2;
+}
+
+.f1{
+background-color:violet;
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,.5);
+width:50%;
+height:80%;
+margin-top:-20px;
+color:#008080;
+font-size:20px;
+margin-left:30px;
+padding:40px;
+}
+.btn1{
+padding:10px 60px;
+background:blue;
+border:0;
+outline:none;
+margin-bottom:20px;
+cursor:pointer;
+font-size:22px;
+font-weight:500;
+border-radius:30px;
+color:white;
+margin-left:60px;
+}
+.btn2{
+padding:10px 60px;
+background:black;
+border:0;
+color:white;
+outline:none;
+cursor:pointer;
+font-size:22px;
+font-weight:500;
+border-radius:30px;
+}
+.v1 img{
+border-radius:10px;
+height:200px;
+width:100%;
+box-shadow:0 0 10px rgba(0,0,0,.5);
+}
+.v2 img{
+border-radius:10px;
+height:200px;
+width:80%;
+box-shadow:0 0 10px rgba(0,0,0,.5);
+}
+.v3 img{
+border-radius:10px;
+height:200px;
+width:130%;
+box-shadow:0 0 10px rgba(0,0,0,.5);
+}
+.v4 table{
+background-color:#454545;
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,.5);
+width:100%;
+height:60%;
+color:white;
+}
+.mar1{
+margin-left:100%;
+font-size:35px;
+}
+.mar2{
+margin-left:40px;
+}
+.mar3{
+margin-top:20px;
+}
+.tak1{
+background-color:yellow;
+padding:60px;
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,.5);
+max-width:600px;
+width:100%;
+height:79%;
+margin-left:53%;
+margin-top:-41%;
+}
+.vission1{
+background-color:white;
+padding:30px;
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,.5);
+max-width:400px;
+width:100%;
+}
+.vission1 h1{
+color:red;
+font-weight:800;
+}
+.face1 img{
+border-radius:50%;
+border:4px solid red;
+cursor:pointer;
+height:80%;
+}
+.face2{
+color:white;
+font-weight:600;
+margin-left:40%;
+}
+.vission1 p{
+color:black;
+}
+.tak1 h1{
+text-shadow:3px 3px 3px red;
+color:white;
+font-weight:800;
+font-size:70px;
+}
+.event1{
+background-color:purple;
+padding:30px;
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,.5);
+max-width:600px;
+width:100%;
+}
+.event1 h1{
+text-shadow:3px 3px 3px green;
+color:white;
+font-weight:800;
+font-size:40px;
+}
+.event1 p{
+color:white;
+font-weight:800;
+font-size:20px;
+}
+.text{
+color:white;
+font-weight:800;
+font-size:20px;
+}
+.mySlides {
+display: none
+}
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width:20%;
+  margin-right:50%;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+
+.next {
+  right:0px;
+  border-radius: 3px 0 0 3px;
+}
+
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+
+.dot {
+  cursor: pointer;
+  height:15px;
+  width:15px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: red;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+
+@media only screen and (max-width: 10px) {
+  .prev, .next,.text {font-size: 11px}
+}
+//.v4 img{
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,.5);
+width:30%;
+margin-top:30px;
+}//
+</style>
+</head>
+<body>
+<div class="word">
+<h1>ADMISSION REGISTRATION 2024</h1>
+</div>
+<div class="t1">
+<img src="taklogo.PNG">
+</div>
+<div class="container">
+<form action="https://www.google.com/search" method="get" class="search-bar">
+<input type="text" placeholder="Search anything" name="q">
+<button type="submit" class="t1"><img src="Search.PNG"></button>
+</form>
+</div>
+<div class="m1">
+<div class="topnav">
+  <a href="#home" class="active">MENU</a>
+<div id="myLinks">
+<ul>   
+<li><a href="Takshashila University.html">About</a></li>
+<li><a href="campus.html">Campus</a></li>
+</ul>
+</div>
+<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+ </a>
+</div>
+</div>
+<div class="i1">
+<section class="section">
+<div class="slider">
+<div class="slide">
+<input type="radio" name="radio-btn" id="radio1">
+<input type="radio" name="radio-btn" id="radio2">
+<input type="radio" name="radio-btn" id="radio3">
+<div class="st first">
+<img src="Computer_Lab_0.PNG" alt="">
+</div>
+<div class="st">
+<img src="photo3.jpg" alt="">
+</div>
+<div class="st">
+<img src="photo2.jpg" alt="">
+</div>
+<div class="nav-auto">
+<div class="a-b1"></div>
+<div class="a-b2"></div>
+<div class="a-b3"></div>
+</div>
+<div class="nav-m">
+<label for"radio1" class="m-btn"></label>
+<label for"radio2" class="m-btn"></label>
+<label for"radio3" class="m-btn"></label>
+</div>
+</div>
+</section>
+</div>
+<div class="f1">
+<h1><center>Admission Enquiry 2024</center></h1>
+<br>
+<form>
+<table height=45% align=center>
+<tr>
+<td>First Name : <input type="text" id="S1" value="" placeholder=Firstname></td>
+<td><span id="message1" style="color:red"></span></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Last Name : <input type="text" id="S2" value="" placeholder=Lastname></td>
+<td><span id="message2" style="color:red"></span></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>
+Select Course :<select id="S8" value="">
+<option>Select Course</option> 
+<option>B.Tech-Computer Science and Engineering</option>
+<option>Bachelor of Commerce</option>
+<option>B.Com-Computer Application</option>
+</select>
+</td>
+<td><span id="message7" style="color:red"></span></td>
+</tr>
+<tr>
+<td>Father Name : <input type="text" id="S3" value="" placeholder=Fathername></td>
+<td><span id="message3" style="color:red"></span></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Phone Number : <input type="text" id="S4" value="" placeholder=phonenumber></td>
+<td><span id="message4" style="color:red"></span></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Email : <input type="email" id="S5" size="30" value="" placeholder=@gmail.com></td>
+<td><span id="message"5 style="color:red"></span></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Password : <input type="password" id="S6" value="" placeholder=password></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Confirm Password : <input type="password" id="S7" value="" placeholder=confirmpassword></td>
+<td><span id="message6" style="color:red"></span></td>
+</table>
+<br>
+<tr>
+<input type="submit" value="SUBMIT" class="btn1" onclick="return verify()">
+<button type="reset" value="RESET" class="btn2">RESET</button>
+</form>
+</div>
+<br>
+<br>
+<div class="tak1">
+<h1>TAKSHASHILA UNIVERSITY</h1>
+<p>State Private University Established Under TamilNadu Private University Act 2019</p>
+<p class="tak2">(A Unit of Sri Manakula Vinayagar and Mailam Group of Institutions)</p>
+</div>
+<br>
+<br>
+<center>
+<div class="event1">
+<h1>EVENTS & NEWS</h1>
+<p>Click Me</p>
+<div class="slideshow-container">
+<div class="mySlides fade">
+<div class="numbertext">1 / 2</div>
+ <a href="Child.html"> <img src="girl-child-day-300x240.jpg" style="width:50%" "height:50%"></a>
+  <div class="text">Girl Child Day Celebration at Takshashila University</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 2</div>
+  <a href="Bazaar.html"><img src="baazar-at-takshashila-768x614.jpeg" style="width:50%" "height:50%"></a>
+  <div class="text">Bazaar 1.0 By Manasso Club</div>
+</div>
+
+
+</div>
+<br>
+
+<div>
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  
+</div>
+</div>
+</center>
+</div>
+<br>
+<center>
+<h1>Empowering Future Leadership</h1>
+<table width=60% height=20%>
+<tr>
+<td><div class="vission1">
+<h1>Vision</h1>
+<p>To inspire, develop and create change makers and world leaders of tomorrow through knowledge similar to the ancient Takshashila University<p>
+</div></td>
+<td></td>
+<td></td>
+<td></td>
+<td><div class="vission1">
+<h1>Mission</h1>
+<p>Nurturing and developing the leaders of tomorrow with the brightest minds and best resources, fostering lifelong learning and ethical excellence.</p>
+</div>
+</td>
+</tr>
+</table>
+</center>
+<br>
+<center>
+<h1>Industry-Integrrated Flagship Course</h1>
+</center>
+<br>
+<center>
+<table width=80%>
+<tr>
+<td><div class="v1">
+<a href="ibm.html"><img src="ibm.PNG"></a>
+</div></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>
+<div class="v2">
+<a href="kalvium.html"><img src="kalvium.PNG"></a>
+</div>
+</td>
+<td><div class="v3">
+<a href="Ae.html"><img src="ae.PNG"></a>
+</div></td>
+</tr>
+</table>
+</center>
+<br>
+<center>
+<h1>Experience Rich Facilities and Amenities<h1>
+</center>
+<br>
+<div class="pragash1">
+<!-- partial:index.partial.html -->
+<div class="suriya1">
+<div class="d-track">
+<div class="d">
+<img src="amenities1.png" alt="" />
+</div>
+<div class="d">
+<img src="amenities2.png" alt="" />
+<p>Regular Guest Lecture</p>
+</div>
+<div class="d">
+<img src="amenities3.png" alt="" />
+</div>
+<div class="d">
+<img src="amenities4.png" alt="" />
+</div>
+<div class="d">
+<img src="amenities5.png"  alt="" />
+</div>
+<div class="d">
+<img src="amenities6.png" alt="" />
+</div>
+<div class="d">
+<img src="amenities7.png" alt="" />
+</div>
+<div class="d">
+<img src="amenities8.png" alt="" />
+</div>
+<div class="d">
+<img src="amenities9.png" alt="" />
+</div>
+<div class="d">
+<img src="amenities10.png" alt="" />
+</div>
+<div class="d">
+<img src="amenities4.png" alt="" />
+</div>
+<div class="d">
+<img src="amenities5.png" alt="" />
+</div>
+<div class="d">
+<img src="amenities6.png" alt="" />
+</div>
+<div class="d">
+<img src="amenities7.png" alt="" />
+</div>
+</div>
+</div>
+</div>
+<br>
+<div class="v4">
+<table>
+<tr><td><p class="mar1">CONTACTINFO</p></td></tr>
+<tr>
+<td><p class="mar2"><b>ADDRESS</b></p>
+<p class="mar2">Ongur,Tindivanam taluk,Villupuram District,<br>
+Tamil Nadu 604305.</p></td>
+<td><p><b>EMAIL</b></p>
+<p>admission@takshilauniv.com</p></td>
+<td><p class="mar3"><b>PHONE</b></p>
+<p>7550312752 | 7550312752 | 7550312752<br>
+Student form andra pradesesh / telungana contact:<br>
+7550312752,7550312752</p></td></tr>
+<tr>
+<td><p class="mar2"><b>COURSE</b></p>
+<p class="mar2">
+School of Engineering and Technology<br>
+School of  Arts and Science<br></li> 
+School of Agricultural Sciences<br>
+School of Physiotherapy<br>
+School of Allied Health Sciences<br>
+School of Hotel Management<br>
+School of Pharmacy<br>
+School of Business<br></p></td>
+<td><p><b>QUICK LINKS</b>
+About Us<br>
+Approval<br>
+Admission<br>
+Scholarship<br>
+Gallery<br>
+Job / Career<br>
+Blog<br>
+Contact Us<br>
+</p></td>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tr>
+<tr align=center class="face1"><td><a href=https://www.facebook.com/Takshashila-University-103844879059701><img src="facebook.png" width=20%></td></a>
+<td><a href=https://www.instagram.com/takshashilauniv/><img src="insta.jpg" width=30%></td></a>
+<td><a href=https://www.youtube.com/channel/UCgiO_98ZcbHUYdGxYPzq-jg><img src="youtube.jpg" width=30%></td></a>
+</tr>
+</table>
+</div>
+</body>
+</html>
